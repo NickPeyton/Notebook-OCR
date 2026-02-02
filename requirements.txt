@@ -1,0 +1,4 @@
+google-genai
+watchdog
+pillow
+pillow-heif
