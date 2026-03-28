@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd:*)",
+      "Bash(pip install:*)",
+      "Bash(rm:*)",
+      "WebFetch(domain:ai.google.dev)"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+[Unit]
+Description=Notebook OCR Pipeline
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/notebook-ocr
+EnvironmentFile=/home/pi/notebook-ocr/.env
+ExecStart=/home/pi/notebook-ocr/.venv/bin/python main.py
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

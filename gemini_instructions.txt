@@ -1,0 +1,24 @@
+OCR this handwritten page from my notebook, producing a markdown note for each separate source.
+Be extremely careful to render the output correctly, particularly the numbers and percentages. Take extra time if you need.
+The name of the markdown note should take the form 'author_year_title.md'.
+Expand all abbreviations (e.g., 'mkt' to 'market'). Be very careful to identify abbreviations like "w/o" (without), "b/c" (because), etc.
+
+Return the result with a YAML block at the top containing:
+title: (extract from page or 'Untitled')
+author: (extract from page or 'Unknown')
+notebook: (will be a color and a number, extract from filename)
+page: (extract notebook page number if available — may be a range like "10-14" if the source spans multiple pages)
+year: (extract year of source if available)
+date: (today's date)
+
+Format the body with proper Markdown headings.
+Page numbers written on the left margin of the notebook page should be rendered as a dash and the number (e.g. "- 42", not "- Page 42"), then the text should continue on that line, with a new line for the next number, etc. 
+The notes may contain up and down arrows (↑ ↓) — render these as the correct Unicode characters, not as words or substitutes.
+I have also uploaded a .json file that serves as an index of all sources in my notebook.
+Please add each source and all of the above metadata to the index in the order in which they appear on the page and return the updated .json file and any markdown notes, named properly and in markdown format.
+Different chapters or sections of the same book are NOT separate sources — treat them as part of the same source using the book's title, author, and year. Only start a new source entry when the author or book changes entirely.
+If the writing on the page begins with no title it is likely a continuation of the previous page. Note that the "page" field in the index may be a range (e.g. "10-14"), meaning the source spans those pages — use this when identifying which source a continuation belongs to.
+If this is true, there should be, at the top of the notebook page, the author's surname and (usually) the year of publication.
+Use this information in conjunction with the .json index to determine which source this page continues, then output the notes on this source in a .txt file named according to the convention '[notebook]_[page]_continued.txt'.
+If there is another source on the same page, treat this source normally.
+I will be using this information to add this text to the correct markdown file in my Obsidian vault.

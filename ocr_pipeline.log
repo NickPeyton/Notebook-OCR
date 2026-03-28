@@ -1,0 +1,162 @@
+2026-03-15 09:56:46,125 [INFO] __main__: === Notebook OCR pipeline starting ===
+2026-03-15 09:56:46,126 [INFO] watcher: Watching: notebooks\blue_1
+2026-03-15 09:56:46,127 [INFO] watcher: Watching: notebooks\red_1
+2026-03-15 09:56:46,127 [INFO] watcher: Watching: notebooks\red_2
+2026-03-15 09:57:48,483 [INFO] watcher: New image detected: IMG_2658.HEIC
+2026-03-15 09:57:51,484 [INFO] __main__: Processing: IMG_2658.HEIC (notebook: blue_1)
+2026-03-15 09:57:52,019 [INFO] image_handler: Converted IMG_2658.HEIC to IMG_2658.jpg
+2026-03-15 09:57:52,023 [INFO] image_handler: Deleted original HEIC: IMG_2658.HEIC
+2026-03-15 09:57:52,688 [INFO] ocr: Sending IMG_2658.jpg to Gemini (gemini-2.5-flash)
+2026-03-15 09:57:52,688 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2026-03-15 09:58:11,594 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-03-15 09:58:11,595 [INFO] google_genai.models: AFC remote call 1 is done.
+2026-03-15 09:58:11,595 [INFO] ocr: Gemini response received.
+2026-03-15 09:58:11,600 [INFO] output_writer: Written: Karl_Polanyi_1944_The_Great_Transformation_The_Political_and_Economic_Origins_of_Our_Time.md
+2026-03-15 09:58:11,609 [INFO] index_manager: Index updated: The Great Transformation: The Political and Economic Origins of Our Time
+2026-03-15 09:58:12,170 [INFO] bib_lookup: CrossRef match found for: The Great Transformation: The Political and Economic Origins of Our Time
+2026-03-15 09:58:12,171 [INFO] bib_lookup: BibTeX written for: The Great Transformation: The Political and Economic Origins of Our Time
+2026-03-15 09:58:12,175 [INFO] __main__: Done: IMG_2658.jpg
+2026-03-15 10:00:29,659 [INFO] watcher: New image detected: IMG_2659.HEIC
+2026-03-15 10:00:32,660 [INFO] __main__: Processing: IMG_2659.HEIC (notebook: blue_1)
+2026-03-15 10:00:33,181 [INFO] image_handler: Converted IMG_2659.HEIC to IMG_2659.jpg
+2026-03-15 10:00:33,185 [INFO] image_handler: Deleted original HEIC: IMG_2659.HEIC
+2026-03-15 10:00:33,992 [INFO] ocr: Sending IMG_2659.jpg to Gemini (gemini-2.5-flash)
+2026-03-15 10:00:33,992 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2026-03-15 10:00:53,081 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-03-15 10:00:53,082 [INFO] google_genai.models: AFC remote call 1 is done.
+2026-03-15 10:00:53,082 [INFO] ocr: Gemini response received.
+2026-03-15 10:00:53,085 [INFO] output_writer: Appended continuation to: Karl_Polanyi_1944_The_Great_Transformation_The_Political_and_Economic_Origins_of_Our_Time.md
+2026-03-15 10:00:53,086 [INFO] __main__: Done: IMG_2659.jpg
+2026-03-27 14:52:09,671 [INFO] __main__: === Notebook OCR pipeline starting ===
+2026-03-27 14:52:09,675 [INFO] watcher: Watching: notebooks\blue_1
+2026-03-27 14:52:09,675 [INFO] watcher: Watching: notebooks\red_1
+2026-03-27 14:52:09,675 [INFO] watcher: Watching: notebooks\red_2
+2026-03-27 15:04:14,895 [INFO] watcher: New image detected: IMG_2782.HEIC
+2026-03-27 15:04:17,895 [INFO] __main__: Processing: IMG_2782.HEIC (notebook: red_1)
+2026-03-27 15:04:18,756 [INFO] image_handler: Converted IMG_2782.HEIC to IMG_2782.jpg
+2026-03-27 15:04:18,761 [INFO] image_handler: Deleted original HEIC: IMG_2782.HEIC
+2026-03-27 15:04:21,413 [INFO] ocr: Sending IMG_2782.jpg to Gemini (gemini-2.5-flash)
+2026-03-27 15:04:21,414 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2026-03-27 15:04:45,411 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-03-27 15:04:45,416 [INFO] ocr: Gemini response received.
+2026-03-27 15:04:45,426 [INFO] output_writer: Written: Prasannan_Parthasarathi_2011_Why_Europe_Grew_Rich_and_Asia_Did_Not.md
+2026-03-27 15:04:45,437 [INFO] index_manager: Index updated: Why Europe Grew Rich and Asia Did Not
+2026-03-27 15:04:47,970 [INFO] bib_lookup: CrossRef match found for: Why Europe Grew Rich and Asia Did Not
+2026-03-27 15:04:47,983 [INFO] bib_lookup: BibTeX written for: Why Europe Grew Rich and Asia Did Not
+2026-03-27 15:04:47,989 [INFO] __main__: Done: IMG_2782.jpg
+2026-03-27 15:07:12,890 [INFO] watcher: New image detected: IMG_2783.HEIC
+2026-03-27 15:07:15,891 [INFO] __main__: Processing: IMG_2783.HEIC (notebook: red_1)
+2026-03-27 15:07:16,844 [INFO] image_handler: Converted IMG_2783.HEIC to IMG_2783.jpg
+2026-03-27 15:07:16,850 [INFO] image_handler: Deleted original HEIC: IMG_2783.HEIC
+2026-03-27 15:07:19,301 [INFO] ocr: Sending IMG_2783.jpg to Gemini (gemini-2.5-flash)
+2026-03-27 15:07:19,301 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2026-03-27 15:07:41,947 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-03-27 15:07:41,950 [INFO] ocr: Gemini response received.
+2026-03-27 15:07:41,954 [INFO] output_writer: Appended continuation to: Prasannan_Parthasarathi_2011_Why_Europe_Grew_Rich_and_Asia_Did_Not.md
+2026-03-27 15:07:41,956 [INFO] __main__: Done: IMG_2783.jpg
+2026-03-27 15:09:24,314 [INFO] watcher: New image detected: IMG_2784.HEIC
+2026-03-27 15:09:27,315 [INFO] __main__: Processing: IMG_2784.HEIC (notebook: red_1)
+2026-03-27 15:09:28,088 [INFO] image_handler: Converted IMG_2784.HEIC to IMG_2784.jpg
+2026-03-27 15:09:28,094 [INFO] image_handler: Deleted original HEIC: IMG_2784.HEIC
+2026-03-27 15:09:30,422 [INFO] ocr: Sending IMG_2784.jpg to Gemini (gemini-2.5-flash)
+2026-03-27 15:09:30,423 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2026-03-27 15:09:41,346 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-03-27 15:09:41,349 [INFO] ocr: Gemini response received.
+2026-03-27 15:09:41,353 [INFO] output_writer: Appended continuation to: Prasannan_Parthasarathi_2011_Why_Europe_Grew_Rich_and_Asia_Did_Not.md
+2026-03-27 15:09:41,355 [INFO] __main__: Done: IMG_2784.jpg
+2026-03-27 15:10:46,380 [INFO] watcher: New image detected: IMG_2785.HEIC
+2026-03-27 15:10:49,382 [INFO] __main__: Processing: IMG_2785.HEIC (notebook: red_1)
+2026-03-27 15:10:50,270 [INFO] image_handler: Converted IMG_2785.HEIC to IMG_2785.jpg
+2026-03-27 15:10:50,274 [INFO] image_handler: Deleted original HEIC: IMG_2785.HEIC
+2026-03-27 15:10:52,563 [INFO] ocr: Sending IMG_2785.jpg to Gemini (gemini-2.5-flash)
+2026-03-27 15:10:52,564 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2026-03-27 15:11:16,311 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-03-27 15:11:16,314 [INFO] ocr: Gemini response received.
+2026-03-27 15:11:16,323 [INFO] output_writer: Written: Ronald_Findlay_Kevin_ORourke_2009_Power_and_Plenty_Trade_War_and_the_World_Economy_in_the_Second_Millennium.md
+2026-03-27 15:11:16,334 [INFO] index_manager: Index updated: Power and Plenty: Trade, War and the World Economy in the Second Millennium
+2026-03-27 15:11:18,628 [INFO] bib_lookup: CrossRef match found for: Power and Plenty: Trade, War and the World Economy in the Second Millennium
+2026-03-27 15:11:18,629 [INFO] bib_lookup: BibTeX written for: Power and Plenty: Trade, War and the World Economy in the Second Millennium
+2026-03-27 15:11:18,631 [INFO] __main__: Done: IMG_2785.jpg
+2026-03-27 15:12:08,892 [INFO] watcher: New image detected: IMG_2786.HEIC
+2026-03-27 15:12:11,894 [INFO] __main__: Processing: IMG_2786.HEIC (notebook: red_1)
+2026-03-27 15:12:12,726 [INFO] image_handler: Converted IMG_2786.HEIC to IMG_2786.jpg
+2026-03-27 15:12:12,733 [INFO] image_handler: Deleted original HEIC: IMG_2786.HEIC
+2026-03-27 15:12:15,055 [INFO] ocr: Sending IMG_2786.jpg to Gemini (gemini-2.5-flash)
+2026-03-27 15:12:15,056 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2026-03-27 15:12:48,535 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-03-27 15:12:48,546 [INFO] ocr: Gemini response received.
+2026-03-27 15:12:48,551 [INFO] output_writer: Appended continuation to: Ronald_Findlay_Kevin_ORourke_2009_Power_and_Plenty_Trade_War_and_the_World_Economy_in_the_Second_Millennium.md
+2026-03-27 15:12:48,554 [INFO] __main__: Done: IMG_2786.jpg
+2026-03-27 15:15:02,368 [INFO] watcher: New image detected: IMG_2787.HEIC
+2026-03-27 15:15:05,370 [INFO] __main__: Processing: IMG_2787.HEIC (notebook: red_1)
+2026-03-27 15:15:06,146 [INFO] image_handler: Converted IMG_2787.HEIC to IMG_2787.jpg
+2026-03-27 15:15:06,150 [INFO] image_handler: Deleted original HEIC: IMG_2787.HEIC
+2026-03-27 15:15:08,524 [INFO] ocr: Sending IMG_2787.jpg to Gemini (gemini-2.5-flash)
+2026-03-27 15:15:08,525 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2026-03-27 15:15:42,894 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-03-27 15:15:42,896 [INFO] ocr: Gemini response received.
+2026-03-27 15:15:42,899 [INFO] output_writer: Appended continuation to: Ronald_Findlay_Kevin_ORourke_2009_Power_and_Plenty_Trade_War_and_the_World_Economy_in_the_Second_Millennium.md
+2026-03-27 15:15:42,900 [INFO] __main__: Done: IMG_2787.jpg
+2026-03-27 15:21:17,483 [INFO] __main__: === Notebook OCR pipeline starting ===
+2026-03-27 15:21:17,484 [INFO] watcher: Watching: notebooks\blue_1
+2026-03-27 15:21:17,484 [INFO] watcher: Watching: notebooks\red_1
+2026-03-27 15:21:17,484 [INFO] watcher: Watching: notebooks\red_2
+2026-03-27 15:22:29,201 [INFO] watcher: New image detected: IMG_2788.HEIC
+2026-03-27 15:22:32,202 [INFO] __main__: Processing: IMG_2788.HEIC (notebook: red_1)
+2026-03-27 15:22:33,115 [INFO] image_handler: Converted IMG_2788.HEIC to IMG_2788.jpg
+2026-03-27 15:22:33,120 [INFO] image_handler: Deleted original HEIC: IMG_2788.HEIC
+2026-03-27 15:22:35,410 [INFO] ocr: Sending IMG_2788.jpg to Gemini (gemini-2.5-flash)
+2026-03-27 15:22:35,411 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2026-03-27 15:23:01,093 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-03-27 15:23:01,098 [INFO] ocr: Gemini response received.
+2026-03-27 15:23:01,101 [WARNING] __main__: Continuation target .md not found on disk: Ronald_Findlay_Kevin_ORourke_2009_Power_and_Plenty_Trade_War_and_the_World_Economy_in_the_Second_Millennium.md
+2026-03-27 15:23:01,103 [INFO] __main__: Done: IMG_2788.jpg
+2026-03-27 15:23:54,003 [INFO] watcher: New image detected: IMG_2789.HEIC
+2026-03-27 15:23:57,004 [INFO] __main__: Processing: IMG_2789.HEIC (notebook: red_1)
+2026-03-27 15:23:57,785 [INFO] image_handler: Converted IMG_2789.HEIC to IMG_2789.jpg
+2026-03-27 15:23:57,791 [INFO] image_handler: Deleted original HEIC: IMG_2789.HEIC
+2026-03-27 15:24:00,076 [INFO] ocr: Sending IMG_2789.jpg to Gemini (gemini-2.5-flash)
+2026-03-27 15:24:00,076 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2026-03-27 15:24:30,589 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-03-27 15:24:30,594 [INFO] ocr: Gemini response received.
+2026-03-27 15:24:30,596 [WARNING] __main__: Continuation target .md not found on disk: Ronald_Findlay_Kevin_ORourke_2009_Power_and_Plenty_Trade_War_and_the_World_Economy_in_the_Second_Millennium.md
+2026-03-27 15:24:30,599 [INFO] __main__: Done: IMG_2789.jpg
+2026-03-27 15:32:26,519 [INFO] watcher: New image detected: IMG_2790.HEIC
+2026-03-27 15:32:29,520 [INFO] __main__: Processing: IMG_2790.HEIC (notebook: red_1)
+2026-03-27 15:32:30,449 [INFO] image_handler: Converted IMG_2790.HEIC to IMG_2790.jpg
+2026-03-27 15:32:30,452 [INFO] image_handler: Deleted original HEIC: IMG_2790.HEIC
+2026-03-27 15:32:32,815 [INFO] ocr: Sending IMG_2790.jpg to Gemini (gemini-2.5-flash)
+2026-03-27 15:32:32,815 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2026-03-27 15:33:01,669 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-03-27 15:33:01,673 [INFO] ocr: Gemini response received.
+2026-03-27 15:33:01,677 [INFO] output_writer: Appended continuation to: Findlay_ORourke_2009_Power_and_Plenty_Trade_War_and_the_World_Economy_in_the_Second_Millennium.md
+2026-03-27 15:33:01,684 [INFO] output_writer: Written: ORourke_2009_World_Trade_1780-1914_The_Great_Specialization.md
+2026-03-27 15:33:01,696 [INFO] index_manager: Index updated: World Trade 1780-1914: The Great Specialization
+2026-03-27 15:33:01,701 [INFO] output_writer: Written: ORourke_2009_World_Trade_1914-39_Deglobalization.md
+2026-03-27 15:33:01,712 [INFO] index_manager: Index updated: World Trade 1914-39: Deglobalization
+2026-03-27 15:33:01,715 [INFO] __main__: Done: IMG_2790.jpg
+2026-03-27 15:38:15,370 [INFO] watcher: New image detected: IMG_2791.HEIC
+2026-03-27 15:38:18,372 [INFO] __main__: Processing: IMG_2791.HEIC (notebook: red_1)
+2026-03-27 15:38:19,190 [INFO] image_handler: Converted IMG_2791.HEIC to IMG_2791.jpg
+2026-03-27 15:38:19,195 [INFO] image_handler: Deleted original HEIC: IMG_2791.HEIC
+2026-03-27 15:38:21,479 [INFO] ocr: Sending IMG_2791.jpg to Gemini (gemini-2.5-flash)
+2026-03-27 15:38:21,480 [INFO] google_genai.models: AFC is enabled with max remote calls: 10.
+2026-03-27 15:38:44,607 [INFO] httpx: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-03-27 15:38:44,610 [INFO] ocr: Gemini response received.
+2026-03-27 15:38:44,617 [INFO] output_writer: Written: ORourke_2009_Ch_9_Reglobalization_The_Late_20th_Century_Global_Perspective.md
+2026-03-27 15:38:44,625 [INFO] index_manager: Index updated: Ch. 9: Reglobalization: The Late 20th Century & Global Perspective
+2026-03-27 15:38:44,636 [INFO] output_writer: Written: ORourke_2009_Ch_10_Globalization_at_the_Dawn_of_the_21st_Century.md
+2026-03-27 15:38:44,647 [INFO] index_manager: Index updated: Ch. 10: Globalization at the Dawn of the 21st Century
+2026-03-27 15:38:44,649 [INFO] __main__: Done: IMG_2791.jpg
+2026-03-27 15:52:55,842 [INFO] __main__: === Notebook OCR pipeline starting ===
+2026-03-27 15:52:55,844 [INFO] watcher: Watching: notebooks\blue_1
+2026-03-27 15:52:55,844 [INFO] watcher: Watching: notebooks\red_1
+2026-03-27 15:52:55,844 [INFO] watcher: Watching: notebooks\red_2
+2026-03-28 10:01:22,566 [INFO] __main__: === Notebook OCR pipeline starting ===
+2026-03-28 10:01:22,570 [INFO] watcher: Watching: notebooks\blue_1
+2026-03-28 10:01:22,570 [INFO] watcher: Watching: notebooks\red_1
+2026-03-28 10:01:22,570 [INFO] watcher: Watching: notebooks\red_2
+2026-03-28 15:17:10,954 [INFO] __main__: === Notebook OCR pipeline starting ===
+2026-03-28 15:17:10,954 [INFO] watcher: Watching: notebooks\blue_1
+2026-03-28 15:17:10,961 [INFO] watcher: Watching: notebooks\red_1
+2026-03-28 15:17:10,961 [INFO] watcher: Watching: notebooks\red_2
