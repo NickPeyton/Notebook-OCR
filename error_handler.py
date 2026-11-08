@@ -1,6 +1,5 @@
 import logging
 import os
-import re
 import smtplib
 import time
 import traceback
@@ -12,15 +11,7 @@ logger = logging.getLogger(__name__)
 
 ALERT_EMAIL = "nicholas.and.dixie@gmail.com"
 INITIAL_WAIT = 5  # seconds
-
-
-def _extract_retry_delay(exc: Exception) -> float | None:
-    """Parse the suggested retry delay (seconds) from a Gemini 429 response, if present."""
-    text = str(exc)
-    match = re.search(r"retryDelay['\"]?\s*:\s*['\"]?(\d+)", text)
-    if match:
-        return float(match.group(1))
-    return None
+MAX_ATTEMPTS = 5
 
 
 def send_alert_email(subject: str, body: str):
@@ -39,39 +30,42 @@ def send_alert_email(subject: str, body: str):
     logger.info("Alert email sent.")
 
 
+def send_failure_alert(context: str, exc: Exception):
+    """Email the error and full traceback. Never raises: a broken email setup
+    must not hide the original error."""
+    tb = "".join(traceback.format_exception(exc))
+    subject = f"[Notebook OCR] Pipeline stopped: {context}"
+    body = (
+        f"The pipeline hit an unrecoverable error and has stopped.\n\n"
+        f"Failed while: {context}\n"
+        f"Error: {exc}\n\n"
+        f"Traceback:\n{tb}"
+    )
+    try:
+        send_alert_email(subject, body)
+    except Exception as email_err:
+        logger.error(f"Failed to send alert email: {email_err}")
+
+
 def with_retry(func):
-    """Retry decorator: 5 attempts with exponential backoff.
-    On 5th failure, sends alert email and re-raises."""
+    """Retry decorator: MAX_ATTEMPTS attempts with exponential backoff, then re-raise.
+    The alert email is sent by the caller that finally handles the error (main.py)."""
 
     @wraps(func)
     def wrapper(*args, **kwargs):
         wait = INITIAL_WAIT
-        for attempt in range(1, 6):
+        for attempt in range(1, MAX_ATTEMPTS + 1):
             try:
                 return func(*args, **kwargs)
             except Exception as e:
-                tb = traceback.format_exc()
                 logger.error(
-                    f"Attempt {attempt}/5 failed for {func.__name__}: {e}\n{tb}"
+                    f"Attempt {attempt}/{MAX_ATTEMPTS} failed for {func.__name__}: {e}",
+                    exc_info=True,
                 )
-                if attempt == 5:
-                    subject = f"[Notebook OCR] Fatal error in {func.__name__}"
-                    body = (
-                        f"All 5 retry attempts failed.\n\n"
-                        f"Function: {func.__name__}\n"
-                        f"Error: {e}\n\n"
-                        f"Traceback:\n{tb}"
-                    )
-                    try:
-                        send_alert_email(subject, body)
-                    except Exception as email_err:
-                        logger.error(f"Failed to send alert email: {email_err}")
+                if attempt == MAX_ATTEMPTS:
                     raise
-                # Respect the API's suggested retry delay if present (e.g. Gemini 429s)
-                suggested = _extract_retry_delay(e)
-                sleep_for = max(wait, suggested) if suggested else wait
-                logger.info(f"Retrying in {sleep_for:.0f}s...")
-                time.sleep(sleep_for)
+                logger.info(f"Retrying in {wait}s...")
+                time.sleep(wait)
                 wait *= 2
 
     return wrapper

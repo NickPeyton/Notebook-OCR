@@ -8,7 +8,9 @@ User=pi
 WorkingDirectory=/home/pi/notebook-ocr
 EnvironmentFile=/home/pi/notebook-ocr/.env
 ExecStart=/home/pi/notebook-ocr/.venv/bin/python main.py
-Restart=on-failure
+# on-abnormal: restart after a crash, but not after the pipeline deliberately stops
+# (exit code 1, alert email sent) — otherwise it would retry the same failing page forever
+Restart=on-abnormal
 RestartSec=10
 StandardOutput=journal
 StandardError=journal
